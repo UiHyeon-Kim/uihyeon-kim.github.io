@@ -40,3 +40,12 @@ python3 -m http.server 4173 --bind 127.0.0.1
 - [AdMob app-ads.txt 설정](https://support.google.com/admob/answer/9363762?hl=ko)
 
 사이트의 앱 화면은 예시 운동 데이터로 촬영한 이미지입니다. 상표와 앱 이미지의 권리는 PoseUp 제작자에게 있습니다.
+
+## SNAPBOUND 비공개 테스트 안내
+
+`snapbound/`에는 SNAPBOUND의 로컬 플레이 버전 소개, 개인정보처리방침, 도움말을 둡니다.
+공개 경로는 `/snapbound/`, `/snapbound/privacy.html`, `/snapbound/support.html`입니다.
+문의 이메일은 hanhyo042@gmail.com이며, 앱·광고 설정의 정본은 SNAPBOUND 저장소의 `release/closed-test.properties`와 출시 준비 문서입니다.
+루트 PoseUp 페이지와 기존 `app-ads.txt`는 별도로 유지합니다. 두 앱은 같은 AdMob 게시자 계정을 사용합니다.
+
+SNAPBOUND 페이지 게시와 Android 앱/테스트 트랙 배포는 별개입니다. 구매 확인 서버나 온라인 기능을 활성화하면 개인정보처리방침과 실제 제공 범위를 함께 갱신해야 합니다.
