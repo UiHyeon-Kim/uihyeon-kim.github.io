@@ -1,17 +1,20 @@
-# PoseUp website
+# UiHyeon Kim apps
 
-PoseUp 소개와 Google Play·개인정보처리방침 링크를 제공하는 정적 GitHub Pages 사이트입니다.
+앱 목록과 각 앱의 소개·지원 페이지를 제공하는 정적 GitHub Pages 사이트입니다.
 
-- 사이트: https://uihyeon-kim.github.io/
+- 앱 목록: https://uihyeon-kim.github.io/
+- SNAPBOUND: https://uihyeon-kim.github.io/snapbound/
+
+- PoseUp: https://uihyeon-kim.github.io/poseup/
 - 광고 판매자 파일: https://uihyeon-kim.github.io/app-ads.txt
 - Google Play: https://play.google.com/store/apps/details?id=com.hanhyo.poseup
 - 개인정보처리방침: https://uihyeonkim.notion.site/PoseUp-3545686b1943803398e1ee1926b5f62b
 
 ## 수정과 배포
 
-`index.html`과 `styles.css`를 수정하고 `main`에 푸시하면 배포됩니다. 패키지 설치나 빌드 과정이 없습니다.
+루트의 `index.html`과 `styles.css`는 앱 목록입니다. PoseUp은 `poseup/index.html`·`poseup/styles.css`·`poseup/assets/`에서 관리합니다. `main`에 푸시하면 배포됩니다. 패키지 설치나 빌드 과정이 없습니다.
 
-GitHub 저장소의 Settings → Pages는 **Deploy from a branch / main / /(root)**로 설정합니다. `.nojekyll`은 소스 파일을 그대로 게시하도록 합니다. `assets/`에는 공개 앱 아이콘과 예시 운동 기록이 표시된 앱 캡처만 들어 있습니다. 홈페이지는 별도 분석·추적 스크립트를 사용하지 않습니다.
+GitHub 저장소의 Settings → Pages는 **Deploy from a branch / main / /(root)**로 설정합니다. `.nojekyll`은 소스 파일을 그대로 게시하도록 합니다. `poseup/assets/`에는 공개 앱 아이콘과 예시 운동 기록이 표시된 앱 캡처만 들어 있습니다. 홈페이지는 별도 분석·추적 스크립트를 사용하지 않습니다.
 
 로컬 확인:
 
@@ -25,7 +28,7 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 게시 후 필요한 설정:
 
-1. Play Console → PoseUp → 스토어 설정 → 스토어 등록정보 연락처 세부정보의 **웹사이트**를 `https://uihyeon-kim.github.io/`로 등록합니다.
+1. Play Console → PoseUp → 스토어 설정 → 스토어 등록정보 연락처 세부정보의 **웹사이트**를 `https://uihyeon-kim.github.io/poseup/`로 등록합니다. 같은 도메인을 사용하므로 AdMob의 파일 위치는 루트의 `/app-ads.txt` 그대로입니다. 기존 루트 주소도 앱 목록에서 PoseUp으로 연결되지만, 소개 페이지로 바로 이동하려면 새 경로를 사용합니다.
 2. 공개 Play 페이지의 앱 지원에 사이트 링크가 표시되는지 확인합니다.
 3. AdMob → 앱 → 모든 앱 보기 → app-ads.txt → PoseUp에서 업데이트를 확인합니다.
 4. 상태가 검증됨으로 바뀌는지 확인합니다. 파일 게시만으로 AdMob 앱 인증이나 실제 광고 게재가 완료된 것은 아닙니다.
@@ -46,6 +49,6 @@ python3 -m http.server 4173 --bind 127.0.0.1
 `snapbound/`에는 SNAPBOUND의 로컬 플레이 버전 소개, 개인정보처리방침, 도움말을 둡니다.
 공개 경로는 `/snapbound/`, `/snapbound/privacy.html`, `/snapbound/support.html`입니다.
 문의 이메일은 hanhyo042@gmail.com이며, 앱·광고 설정의 정본은 SNAPBOUND 저장소의 `release/closed-test.properties`와 출시 준비 문서입니다.
-루트 PoseUp 페이지와 기존 `app-ads.txt`는 별도로 유지합니다. 두 앱은 같은 AdMob 게시자 계정을 사용합니다.
+PoseUp 소개는 `/poseup/`에, 앱 목록은 루트 `/`에 두고 기존 `app-ads.txt`는 루트에 유지합니다. 두 앱은 같은 AdMob 게시자 계정을 사용합니다.
 
 SNAPBOUND 페이지 게시와 Android 앱/테스트 트랙 배포는 별개입니다. 구매 확인 서버나 온라인 기능을 활성화하면 개인정보처리방침과 실제 제공 범위를 함께 갱신해야 합니다.
